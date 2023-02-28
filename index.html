@@ -8,6 +8,8 @@
     <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/addons/p5.sound.min.js"></script> -->
     <!-- <script type="text/javascript" src="js/p5.min.js"></script> -->
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.js"></script>
   </head>
 
   <body>
@@ -31,60 +33,42 @@
     <section id="section1">
       <h2 class="d_n">section1_tit</h2>
       <ul id="contentList">
-        <li>test lines are here</li>
-        <li>test lines are here</li>
-        <li>test lines are here</li>
-        <li>test lines are here</li>
-        <li>test lines are here</li>
-        <li>test lines are here</li>
-        <li>test lines are here</li>
-        <li>test lines are here</li>
-        <li>test lines are here</li>
-        <li>test lines are here</li>
-        <li>test lines are here</li>
-        <li>test lines are here</li>
-        <li>test lines are here</li>
-        <li>test lines are here</li>
-        <li>test lines are here</li>
-        <li>test lines are here</li>
-        <li>test lines are here</li>
-        <li>test lines are here</li>
-        <li>test lines are here</li>
-        <li>test lines are here</li>
-        <li>test lines are here</li>
-        <li>test lines are here</li>
-        <li>test lines are here</li>
-        <li>test lines are here</li>
-        <li>test lines are here</li>
-        <li>test lines are here</li>
-        <li>test lines are here</li>
-        <li>test lines are here</li>
-        <li>test lines are here</li>
-        <li>test lines are here</li>
-        <li>test lines are here</li>
-        <li>test lines are here</li>
-        <li>test lines are here</li>
-        <li>test lines are here</li>
-        <li>test lines are here</li>
-        <li>test lines are here</li>
-        <li>test lines are here</li>
-        <li>test lines are here</li>
-        <li>test lines are here</li>
-        <li>test lines are here</li>
+        <li class="list_item">test lines are here</li>
+        <li class="list_item">test lines are here</li>
+        <li class="list_item">test lines are here</li>
+        <li class="list_item">test lines are here</li>
+        <li class="list_item">test lines are here</li>
+        <li class="list_item">test lines are here</li>
+        <li class="list_item">test lines are here</li>
+        <li class="list_item">test lines are here</li>
+        <li class="list_item">test lines are here</li>
+        <li class="list_item">test lines are here</li>
+        <li class="list_item">test lines are here</li>
+        <li class="list_item">test lines are here</li>
+        <li class="list_item">test lines are here</li>
+        <li class="list_item">test lines are here</li>
+        <li class="list_item">test lines are here</li>
+        <li class="list_item">test lines are here</li>
+        <li class="list_item">test lines are here</li>
+        <li class="list_item">test lines are here</li>
+        <li class="list_item">test lines are here</li>
+        <li class="list_item">test lines are here</li>
+        <li class="list_item">test lines are here</li>
+        <li class="list_item">test lines are here</li>
+        <li class="list_item">test lines are here</li>
+        <li class="list_item">test lines are here</li>
+        <li class="list_item">test lines are here</li>
+        <li class="list_item">test lines are here</li>
+        <li class="list_item">test lines are here</li>
+        <li class="list_item">test lines are here</li>
+        <li class="list_item">test lines are here</li>
+        <li class="list_item">test lines are here</li>
       </ul>
     </section>
     <script>
-      document.querySelector("#contentList > li").addEventListener("touchstart", listAniStart);
 
-      function listAniStart() {
-        document.querySelector("#contentList > li").addClass("list_ani");
-      }
 
-      document.querySelector("#contentList > li").addEventListener("touchend", listAniEnd);
-      
-      function listAniEnd() {
-        document.querySelector("#contentList > li").removeClass("list_ani");
-      }
+
     </script>
 
     <footer>
