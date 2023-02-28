@@ -108,7 +108,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 	transition: transform 1s, color 1s;
 }
 
-#contentList li:hover {
+#contentList li:hover, #contentList li.list_ani {
 	color: #000;
 	transform: rotateX(360deg);
 }

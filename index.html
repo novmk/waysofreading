@@ -73,14 +73,22 @@
         <li>test lines are here</li>
       </ul>
     </section>
+    <script>
+      document.querySelector("#contentList > li");.addEventListener("touchstart", listAniStart);
+
+      function listAniStart() {
+        document.querySelector("#contentList > li").addClass("list_ani");
+      }
+
+      document.querySelector("#contentList > li").addEventListener("touchend", listAniEnd);
+
+      function listAniEnd() {
+        document.querySelector("#contentList > li").removeClass("list_ani");
+      }
+    </script>
 
     <footer>
     </footer>
-
-
-
-    <b></b>
-    <strong></strong>
 
     
   </body>
