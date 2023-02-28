@@ -1,6 +1,8 @@
-$(document).ready(function() {
-    $('.list_item').on('touchstart touchend', function(e) {
-        e.preventDefault();
-        $(this).toggleClass('list_ani');
-    });
-});
+$('body').on('touchstart', function() {});
+
+// $(document).ready(function() {
+//     $('.list_item').on('touchstart touchend', function(e) {
+//         e.preventDefault();
+//         $(this).toggleClass('list_ani');
+//     });
+// });
