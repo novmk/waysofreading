@@ -111,6 +111,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 #contentList li:hover, #contentList li.list_ani {
 	color: #000;
 	transform: rotateX(360deg);
+	-webkit-user-select: none;
+	-webkit-touch-callout: none;  
 }
 
 
