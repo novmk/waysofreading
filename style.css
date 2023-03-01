@@ -248,27 +248,61 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* ---------- exp3 ---------- */	
 
 #exp3 {
-	width: 50%;
+	width: 100%;
 	margin: 0px auto;
+	margin-top: 10rem;
 }
 
 #exp3 #contentList {
 
 }
 
-
-#exp3 #contentList > li {
-	border: 1px solid #000;
-	padding: 1rem;
-}
-
 #exp3 #contentList > div {
-    border: 1px solid black;
-    padding: 1rem;
-    display: inline;
-    background: white;
-    font-size: 2rem;
+	width: 100%;
 }
+
+#exp3 #contentList > div > div {
+    display: inline-block;
+    position: relative;
+    font-size: 1rem;
+    background: white;
+    border: 1px solid #000;
+    padding: 0.5rem 1.2rem;
+    margin-bottom: 1rem;
+    animation: moveAni 8s;
+    animation-timing-function: linear;
+  	animation-iteration-count: infinite;
+}
+
+#exp3 #contentList > div > div:hover {
+	animation-play-state: paused;
+}
+
+@keyframes moveAni {
+	0%		{left: 0;}
+	100%	{left: 100%;}
+}
+
+#exp3 #contentList .list1 { width: 100% }
+#exp3 #contentList .list2 { width: 120% }
+#exp3 #contentList .list3 { width: 110% }
+#exp3 #contentList .list4 { width: 105% }
+#exp3 #contentList .list5 { width: 118% }
+#exp3 #contentList .list6 { width: 130% }
+#exp3 #contentList .list7 { width: 103% }
+#exp3 #contentList .list8 { width: 112% }
+#exp3 #contentList .list9 { width: 105% }
+#exp3 #contentList .list10 { width: 117% }
+#exp3 #contentList .list11 { width: 128% }
+#exp3 #contentList .list12 { width: 102% }
+#exp3 #contentList .list13 { width: 111% }
+#exp3 #contentList .list14 { width: 104% }
+#exp3 #contentList .list15 { width: 101% }
+#exp3 #contentList .list16 { width: 108% }
+#exp3 #contentList .list17 { width: 122% }
+#exp3 #contentList .list18 { width: 105% }
+#exp3 #contentList .list19 { width: 120% }
+
 
 /* ---------- exp4 ---------- */	
 
