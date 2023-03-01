@@ -10,69 +10,77 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function (){
+        var $main = $('.main_container');
+        
+        $main.append('<div class="cursor">please mouse over<br>to read contents</div>');
+      
+        $(document).mousemove(function(e) {
+            $('.cursor')
+              .eq(0)
+              .css({
+                left: e.pageX + 20,
+                top: e.pageY - 60,
+              });
+            setTimeout(function() {
+              $('.cursor')
+                .eq(1)
+                .css({
+                  left: e.pageX + 20,
+                  top: e.pageY - 60,
+                });
+            }, 120);
+          });    
+      });
+    </script>
   </head>
 
   <body>
-  	
 
-    <header id="header">
-      <h1>WAYS OF READING</h1>
-      <h2>INTERUPPING SKIMMING</h2>
+    <div class="main_container">
+      <header id="header">
+          <h1>WAYS OF INTERRUPTING<br>SKIMMING THE INFORMATION</h1>
 
-      <nav id="gnb">
-        <h2 class="d_n">gnb</h2>
-        <ul id="gnbList">
-          <li class="gnb_list"><a href="index.html" class="bor">01</a></li>
-          <li class="gnb_list"><a href="exp2.html">02</a></li>
-          <li class="gnb_list"><a href="exp3.html">03</a></li>
-          <li class="gnb_list"><a href="exp4.html">04</a></li>
-        </ul>
-      </nav>
-  	</header>
-
-    <section id="section1">
-      <h2 class="d_n">section1_tit</h2>
-      <ul id="contentList">
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-      </ul>
-    </section>
-    <script>
-
-
-
-    </script>
-
-    <footer>
-    </footer>
+    
+          <nav id="gnb">
+            <h2 class="d_n">gnb</h2>
+            <ul id="gnbList" class="clear">
+              <li class="gnb_list"><a href="index.html" class="bor">01</a></li>
+              <li class="gnb_list"><a href="exp2.html">02</a></li>
+              <li class="gnb_list"><a href="exp3.html">03</a></li>
+              <li class="gnb_list"><a href="exp4.html">04</a></li>
+            </ul>
+          </nav>
+        </header>
+    
+        <section id="exp1" class="page_section">
+          <ul id="contentList">
+            <li class="list_item">Long-standing digital device use</li>
+            <li class="list_item">has changed how humans read</li>
+            <li class="list_item">and perceive information.</li>
+            <li class="list_item">Instantaneous and abundant</li>
+            <li class="list_item">information through websites and</li>
+            <li class="list_item">social media has resulted in a</li>
+            <li class="list_item">change in human reading habits.</li>
+            <li class="list_item">People naturally selectively</li>
+            <li class="list_item">accept only the seemingly</li>
+            <li class="list_item">important data and skip the rest</li>
+            <li class="list_item">to obtain target information</li>
+            <li class="list_item">quickly among plenty of</li>
+            <li class="list_item">information. Consequently,</li>
+            <li class="list_item">skimming and scanning has</li>
+            <li class="list_item">become the predominant form of</li>
+            <li class="list_item">reading. This project is a web</li>
+            <li class="list_item">experiment that interrupts users</li>
+            <li class="list_item">from skimming information,</li>
+            <li class="list_item">providing a linear process of reading.</li>
+          </ul>
+        </section>
+    
+      <footer>
+      </footer>
+    </div>
 
     
   </body>

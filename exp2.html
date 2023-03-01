@@ -10,69 +10,107 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function (){
+        var $main = $('.main_container');
+        
+        $main.append('<div class="cursor">please drag and drop the text<br>into boxes</div>');
+      
+        $(document).mousemove(function(e) {
+            $('.cursor')
+              .eq(0)
+              .css({
+                left: e.pageX + 20,
+                top: e.pageY - 60,
+              });
+            setTimeout(function() {
+              $('.cursor')
+                .eq(1)
+                .css({
+                  left: e.pageX + 20,
+                  top: e.pageY - 60,
+                });
+            }, 120);
+            
+          });    
+      });
+    </script>
+
   </head>
 
   <body>
-  	
 
-    <header id="header">
-      <h1>WAYS OF READING</h1>
-      <h2>INTERUPPING SKIMMING</h2>
+    <div class="main_container">
+      <header id="header">
+          <h1>WAYS OF INTERRUPTING<br>SKIMMING THE INFORMATION</h1>
+    
+          <nav id="gnb">
+            <h2 class="d_n">gnb</h2>
+            <ul id="gnbList" class="clear">
+              <li class="gnb_list"><a href="index.html">01</a></li>
+              <li class="gnb_list"><a href="exp2.html" class="bor">02</a></li>
+              <li class="gnb_list"><a href="exp3.html">03</a></li>
+              <li class="gnb_list"><a href="exp4.html">04</a></li>
+            </ul>
+          </nav>
+        </header>
+    
+        <section id="exp2" class="page_section clear">
+          <p id="dropStatus" class="d_n"></p>
+          <div id="wrapperP1"  class="drop_target" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="wrapper_title">
+              please read from here
+              <span class="gt">&gt;</span>
+            </div>
+            <p ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="dragItem">
+              Long-standing digital device use has changed how humans read and perceive information. Instantaneous and abundant information through websites and social media has resulted in a change in human reading habits. People naturally selectively accept only the seemingly important data and skip the rest to obtain target information quickly among plenty of information. Consequently, skimming and scanning has become the predominant form of reading. This project is an experimental web experiment that interrupts users from skimming information, providing a linear process of reading.
+            </p>
+          </div>
+          <div id="wrapperP2"  class="drop_target" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="wrapper_title">
+              continue to read from here
+              <span class="gt">&gt;</span>
+            </div>
+          </div>
+          <div id="wrapperP3"  class="drop_target" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="wrapper_title">
+              continue to read from here
+              <span class="gt">&gt;</span>
+            </div>
+          </div>
+          <div id="wrapperP4" class="drop_target" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="wrapper_title">
+              continue to read from here
+              <span class="gt">&gt;</span>
+            </div>
+          </div>
 
-      <nav id="gnb">
-        <h2 class="d_n">gnb</h2>
-        <ul id="gnbList">
-          <li class="gnb_list"><a href="index.html">01</a></li>
-          <li class="gnb_list"><a href="exp2.html" class="bor">02</a></li>
-          <li class="gnb_list"><a href="exp3.html">03</a></li>
-          <li class="gnb_list"><a href="exp4.html">04</a></li>
-        </ul>
-      </nav>
-  	</header>
+          <script>
+          function dragStart(event) {
+            event.dataTransfer.setData("Text", event.target.id);
+          }
 
-    <section id="section1">
-      <h2 class="d_n">section1_tit</h2>
-      <ul id="contentList">
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-        <li class="list_item">test lines are here</li>
-      </ul>
-    </section>
-    <script>
+          function dragging(event) {
+            document.getElementById("dropStatus").innerHTML = "The p element is being dragged";
+          }
 
+          function allowDrop(event) {
+            event.preventDefault();
+          }
 
+          function drop(event) {
+            event.preventDefault();
+            const data = event.dataTransfer.getData("Text");
+            event.target.appendChild(document.getElementById(data));
+            document.getElementById("dropStatus").innerHTML = "The p element was dropped";
+          }
+          </script>
 
-    </script>
-
-    <footer>
-    </footer>
+        </section>
+    
+      <footer>
+      </footer>
+    </div>
 
     
   </body>

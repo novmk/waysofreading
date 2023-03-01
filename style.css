@@ -5,6 +5,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	padding: 0;
 	border: 0;
 	vertical-align: baseline;
+	box-sizing: border-box;
 }
 
 ul, ol {
@@ -29,7 +30,7 @@ h1, h2, h3, h4, h5, h6, b, strong {
 body {
 	font-family: "Helvetica Neue", "Helvetica", Helvetica, sans-serif;
 	font-size: 12px;
-	line-height: 1.1rem;
+	line-height: 1.25;
 /* 	background-image: linear-gradient(180deg, #9db5ff, #ffffff);*/
 /* 	background-attachment: fixed;*/
  	height: 100vh;
@@ -45,9 +46,25 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 	display: none;
 }
 
+.clear::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.cursor {
+  	position: absolute;
+  	padding: 0.4rem 1.5rem 0.5rem 0.8rem;
+  	border: 1px solid #000;
+  	background: #fff;
+    z-index: 3000;
+}
+
 .bor {
 	border: 1px solid #000;
 }
+
+/* ---------- header ----------	*/	
 
 #header {
 	position: fixed;
@@ -77,27 +94,32 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 	display: block;
     width: 100%;
     height: 100%;
-    font-size: 0.7srem;
+    font-size: 0.7rem;
     font-weight: normal;
     line-height: 1.8rem;
     border-radius: 1.8rem;
     color: #000;
 }
 
-#gnbList::after {
-	content: '';
-	display: block;
-	clear: both;
-}
+/* ---------- exp1 ---------- */	
 
-#section1 {
+#exp1 .page_section {
 	margin-top: 10rem;
 }
-#contentList {
+
+#exp1 .page_section h2 {
+	width: 100%;
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 3rem;
+    text-align: center;
+}
+
+#exp1 #contentList {
 	background: #000;
 }
 
-#contentList li {
+#exp1 #contentList li {
 	background: #fff;
 	font-size: 3rem;
 	height: 5rem;
@@ -108,31 +130,177 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 	transition: transform 1s, color 1s;
 }
 
-#contentList li:hover, #contentList li.list_ani {
+#exp1 #contentList li:hover, #exp1 #contentList li.list_ani {
 	color: #000;
 	transform: rotateX(360deg);
 	-webkit-user-select: none;
 	-webkit-touch-callout: none;  
 }
 
+/* ---------- exp2 ---------- */	
 
-/*
-.gnb_list {
-	display: block;
+#exp2 {
+	position: relative;
 	width: 100%;
-	height: 100%;
-	font-size: 2rem;
-	line-height: 2rem;
+	height: 100vh;
+	max-width: 1710px;
+	margin: 0px auto;
+	padding-top: 3rem;
+}
+
+#dragItem {
+	padding: 1rem;
+	padding-top: 2.8rem;
+	padding-right: 3rem;
+}
+
+.drop_target {
+	position: absolute;
+	border: 1px solid #000;
+	overflow: hidden;
+	background: #fff;
+	z-index: 10;
+}
+
+#exp2 .drop_target:hover {
+	background: #e9e9e9;
+	z-index: 20;
+}
+
+#exp2 .drop_target:hover .wrapper_title {
+	background: #e9e9e9;
+}
+
+#wrapperP1 {
+	top: 15%;
+	left: 4.2%;
+	width: 38.5rem;
+	height: 27.8rem;
+	line-height: 1.1;
+	font-size: 4rem;
+}
+
+#wrapperP2 {
+	top: 53%;
+	left: 25%;
+	width: 30rem;
+	height: 24.6rem;
+	font-size: 2.2rem;
+	z-index: 20;
+}
+
+#wrapperP2 > p {
+	margin-top: -7.6rem;
+}
+
+#wrapperP3 {
+	top: 28%;
+	left: 51%;
+	width: 20rem;
+	height: 34.3rem;
+	font-size: 1.5rem;
+}
+
+#wrapperP3 > p {
+	margin-top: -20.5rem;
+}
+
+#wrapperP4 {
+	top: 18%;
+	right: 4.2%;
+	width: 31.5rem;
+	height: 31rem;
+	line-height: 1.1;
+	font-size: 2.8rem;
+}
+
+#wrapperP4 > p {
+	margin-top: -85.5rem;
+}
+
+.wrapper_title {
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: 0.8rem;
+    font-weight: normal;
+    border-bottom: 1px solid #000;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    background: #fff;
+}
+
+.gt {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 2rem;
+	height: 2rem;
+    line-height: 2rem;
+    font-size: 0.9rem;
+    text-align: right;
+    margin-top: -1px;
+    padding-right: 0.9rem;
+}
+
+/* ---------- exp3 ---------- */	
+
+#exp3 {
+	width: 50%;
+	margin: 0px auto;
+}
+
+#exp3 #contentList {
+
+}
+
+
+#exp3 #contentList > li {
+	border: 1px solid #000;
+	padding: 1rem;
+}
+
+#exp3 #contentList > div {
+    border: 1px solid black;
+    padding: 1rem;
+    display: inline;
+    background: white;
+    font-size: 2rem;
+}
+
+/* ---------- exp4 ---------- */	
+
+#exp4 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80vw;
+    margin-top: -14rem;
+    margin-left: -40vw;
+}
+
+#exp4 #contentList {
 	text-align: center;
-	vertical-align: middle;
-	transform:rotateX(0deg);
-	transition: transform 1s, color 1s;
-	color: skyblue;
 }
 
-.gnb_list:hover {
-	color: black;
-	transform:rotateX(360deg);
+#exp4 #contentList > li {
+    display: inline;
+    position: relative;
+	border: 1px solid #000;
+    padding: 1rem;
+    margin: 3rem;
+    font-size: 2.5rem;
+    background: #fff;
+    z-index: 1;
+    transition: transform 1.5s, padding 1s;
 }
 
-*/
+#exp4 #contentList > li:hover {
+	padding: 1.2rem 1.8rem;
+	font-size: 2.6rem;
+	background: #000;
+	color: #fff;
+    z-index: 100;
+}
