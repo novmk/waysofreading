@@ -33,7 +33,6 @@ body {
 	line-height: 1.25;
 /* 	background-image: linear-gradient(180deg, #9db5ff, #ffffff);*/
 /* 	background-attachment: fixed;*/
- 	height: 100vh;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -64,30 +63,33 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 	border: 1px solid #000;
 }
 
-/* ---------- header ----------	*/	
+/* ---------- header ----------	*/
 
 #header {
 	position: fixed;
-	top: 1rem;
+	top: 0;
 	left: 0;
-	width: 100%;
-	height: 9rem;
+	width: 100vw;
 	text-align: center;
 	font-weight: 700;
+	padding-top: 1.5rem;
 	z-index: 1000;
 }
 
+#header a, #header a:hover, #header a:visited, #header a:active, #header a:focus {
+	color: #000;
+}
+
 #gnbList {
-	width: 7.2rem;
-	margin: 0px auto;
+	display: inline-block;
 	margin-top: 0.5rem;
 }
 
 #gnbList li {
 	float: left;
 	display: inline-block;
-	width: 1.8rem;
-	height: 1.8rem;
+	width: 1.6rem;
+	height: 1.6rem;
 }
 
 #gnbList li a {
@@ -96,9 +98,125 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     height: 100%;
     font-size: 0.7rem;
     font-weight: normal;
-    line-height: 1.8rem;
-    border-radius: 1.8rem;
-    color: #000;
+    line-height: 1.47rem;
+    border-radius: 1.6rem;
+}
+
+#gnbList li a:hover, #gnbList li a:focus {
+	border: 1px solid #000;
+}
+
+/* ---------- index ----------	*/	
+
+#bodyIndex {
+	background: #000;
+}
+
+#bodyIndex .main_container {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+
+#bodyIndex #indexBg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 120vh;
+	background: url("images/exp3.png") no-repeat;
+	background-size: cover;
+	transform: skew(80deg, 10deg);
+	animation: skewBg 10s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+@keyframes skewBg {
+	100% {transform: skew(270deg, 10deg);}
+}
+
+#bodyIndex #header {
+	font-size: 6.8rem;
+	font-weight: 400;
+	line-height: 0.9;
+	text-align: left;
+	padding-left: 2rem;
+	mix-blend-mode: difference;	
+}
+
+#bodyIndex #header h1 {
+	color: #fff;
+}
+
+#bodyIndex #header h2 {
+	position: absolute;
+	right: 2rem;
+	color: #fff;
+}
+
+#bodyIndex #header > div {
+	position: absolute;
+	left: 2rem;
+	top: 50.5rem;
+}
+
+#bodyIndex #header > div > a, #bodyIndex #header > div > a:hover, #bodyIndex #header > div > a:visited, #bodyIndex #header > div > a:focus, #bodyIndex #header > div > a:active {
+	color: #fff;
+}
+
+#bodyIndex #header > div > a:hover, #bodyIndex #header > div > a:focus {
+	border-bottom: 3px solid #fff;
+}
+
+#bodyIndex #pageList {
+	width: 80vw;
+	margin: 0px auto;
+	margin-top: 9.4rem;
+	transform: skew(0deg, 0);
+	animation: bgAni 20s linear infinite;
+	margin-left: 52.2%;
+}
+
+@keyframes bgAni {
+	100% {transform: skew(360deg, 0);}
+}
+
+#bodyIndex #pageList li {
+	position: relative;
+    display: block;
+    float: left;
+    transform: skew(0, -4.1deg);
+    width: 48.2rem;
+    margin-left: -42.5rem;
+}
+
+#bodyIndex #pageList #pageList01 {margin-top: 0rem;}
+#bodyIndex #pageList #pageList02 {margin-top: 11rem;}
+#bodyIndex #pageList #pageList03 {margin-top: 8rem;}
+#bodyIndex #pageList #pageList04 {margin-top: 4rem;}
+#bodyIndex #pageList #pageList05 {margin-top: 12rem;}
+#bodyIndex #pageList #pageList06 {margin-top: 8rem;}
+
+#bodyIndex #pageList li:first-child {
+	margin-left: 0;
+}
+
+#bodyIndex ul li a img {
+	width: 100%;
+	height: auto;
+}
+
+#indexP {
+	position: absolute;
+	font-size: 2rem;
+	font-weight: 300;
+	line-height: 1.05;
+	width: 50vw;
+	left: 50vw;
+	color: #fff;
+
 }
 
 /* ---------- exp1 ---------- */	
@@ -131,7 +249,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 	transition: transform 1s, color 1s;
 }
 
-#exp1 #contentList li:hover, #exp1 #contentList li.list_ani {
+#exp1 #contentList li:hover, #exp1 #contentList li:focus, #exp1 #contentList li.list_ani {
 	color: #000;
 	transform: rotateX(360deg);
 	-webkit-user-select: none;
@@ -142,7 +260,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 #exp2 {
 	position: relative;
-	width: 100%;
+	width: 100vw;
 	height: 100vh;
 	max-width: 1710px;
 	margin: 0px auto;
@@ -163,12 +281,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 	z-index: 10;
 }
 
-#exp2 .drop_target:hover {
+#exp2 .drop_target:hover, #exp2 .drop_target:focus {
 	background: #e9e9e9;
 	z-index: 20;
 }
 
-#exp2 .drop_target:hover .wrapper_title {
+#exp2 .drop_target:hover .wrapper_title, #exp2 .drop_target:focus .wrapper_title {
 	background: #e9e9e9;
 }
 
@@ -198,12 +316,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 	top: 28%;
 	left: 51%;
 	width: 20rem;
-	height: 34.3rem;
-	font-size: 1.5rem;
+	height: 33.8rem;
+	font-size: 1.4rem;
 }
 
 #wrapperP3 > p {
-	margin-top: -20.5rem;
+	margin-top: -21rem;
+	padding-right: 1.8rem;
 }
 
 #wrapperP4 {
@@ -212,11 +331,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 	width: 31.5rem;
 	height: 31rem;
 	line-height: 1.1;
-	font-size: 2.8rem;
+	font-size: 2.5rem;
 }
 
 #wrapperP4 > p {
-	margin-top: -85.5rem;
+	margin-top: -82rem;
+	padding-right: 2.1rem;
 }
 
 .wrapper_title {
@@ -246,16 +366,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     padding-right: 0.9rem;
 }
 
-/* ---------- exp3 ---------- */	
+/* ---------- exp3 ---------- */
 
 #exp3 {
-	width: 100%;
+	width: 100vw;
 	margin: 0px auto;
 	margin-top: 10rem;
-}
-
-#exp3 #contentList {
-
 }
 
 #exp3 #contentList > div {
@@ -266,7 +382,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     display: inline-block;
     position: relative;
     font-size: 1rem;
-    background: white;
+    background: #fff;
     border: 1px solid #000;
     padding: 0.5rem 1.2rem;
     margin-bottom: 1rem;
@@ -275,7 +391,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   	animation-iteration-count: infinite;
 }
 
-#exp3 #contentList > div > div:hover {
+#exp3 #contentList > div > div:hover, #exp3 #contentList > div > div:focus {
 	animation-play-state: paused;
 }
 
@@ -292,7 +408,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 #exp3 #contentList .list6 { width: 130% }
 #exp3 #contentList .list7 { width: 103% }
 #exp3 #contentList .list8 { width: 112% }
-#exp3 #contentList .list9 { width: 105% }
+#exp3 #contentList .list9 { width: 106% }
 #exp3 #contentList .list10 { width: 117% }
 #exp3 #contentList .list11 { width: 128% }
 #exp3 #contentList .list12 { width: 102% }
@@ -303,19 +419,23 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 #exp3 #contentList .list17 { width: 122% }
 #exp3 #contentList .list18 { width: 105% }
 #exp3 #contentList .list19 { width: 120% }
+#exp3 #contentList .list20 { width: 100% }
+#exp3 #contentList .list21 { width: 102% }
+#exp3 #contentList .list22 { width: 109% }
+#exp3 #contentList .list23 { width: 118% }
+#exp3 #contentList .list24 { width: 128% }
+#exp3 #contentList .list25 { width: 110% }
+#exp3 #contentList .list26 { width: 103% }
 
 
-/* ---------- exp4 ---------- */	
+/* ---------- exp4 ---------- */
 
 #exp4 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
     width: 80vw;
-    margin-top: -14rem;
-    margin-left: -40vw;
+    margin: 0px auto;
+    margin-top: 12.8rem;
 }
-
+	
 #exp4 #contentList {
 	text-align: center;
 }
@@ -325,17 +445,122 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     position: relative;
 	border: 1px solid #000;
     padding: 1rem;
-    margin: 3rem;
+    margin: 2.2rem;
     font-size: 2.5rem;
     background: #fff;
     z-index: 1;
     transition: transform 1.5s, padding 1s;
 }
 
-#exp4 #contentList > li:hover {
+#exp4 #contentList > li:hover, #exp4 #contentList > li:focus {
 	padding: 1.2rem 1.8rem;
 	font-size: 2.6rem;
 	background: #000;
 	color: #fff;
     z-index: 100;
+    margin: 1rem;
 }
+
+/* ---------- exp5 ---------- */
+
+#exp5 {
+	padding: 1.5rem;
+}
+
+#exp5 > div {
+	position: relative;
+	font-size: 3rem;
+	height: 120vh;
+	text-align: center;
+/*	padding-left: 30vw;*/
+}
+
+#exp5 > div > a.scroll {
+	position: absolute;
+	display: inline-block;
+	font-size: 1.8rem;
+	padding-left: 0.8rem;
+	color: #999;
+}
+
+#exp5 > div > a:hover, #exp5 > div > a:focus {
+	color: #000;
+}
+
+#list_item01 {
+	margin-top: 26.2rem;
+}
+
+
+/*#list_item01 .blank {display: inline-block; width: 5rem;}
+#list_item02 .blank {display: inline-block; width: 52rem;}
+#list_item03 .blank {display: inline-block; width: 4rem;}
+#list_item04 .blank {display: inline-block; width: 4rem;}
+#list_item05 .blank {display: inline-block; width: 4rem;}
+#list_item06 .blank {display: inline-block; width: 4rem;}
+#list_item07 .blank {display: inline-block; width: 4rem;}
+#list_item08 .blank {display: inline-block; width: 4rem;}
+#list_item09 .blank {display: inline-block; width: 4rem;}
+#list_item10 .blank {display: inline-block; width: 4rem;}
+#list_item11 .blank {display: inline-block; width: 4rem;}
+#list_item12 .blank {display: inline-block; width: 4rem;}
+#list_item13 .blank {display: inline-block; width: 4rem;} 
+#list_item14 .blank {display: inline-block; width: 4rem;}
+#list_item15 .blank {display: inline-block; width: 4rem;}
+#list_item16 .blank {display: inline-block; width: 4rem;}
+#list_item17 .blank {display: inline-block; width: 4rem;}
+#list_item18 .blank {display: inline-block; width: 4rem;}
+#list_item19 .blank {display: inline-block; width: 4rem;}
+#list_item20 .blank {display: inline-block; width: 4rem;}
+#list_item21 .blank {display: inline-block; width: 4rem;}
+#list_item22 .blank {display: inline-block; width: 4rem;}
+#list_item23 .blank {display: inline-block; width: 4rem;}
+#list_item24 .blank {display: inline-block; width: 4rem;}
+#list_item25 .blank {display: inline-block; width: 4rem;}
+#list_item26 .blank {display: inline-block; width: 4rem;}*/
+
+/* ---------- exp6 ---------- */
+
+#exp6 .page_section {
+	margin-top: 10rem;
+}
+
+#exp6 .page_section h2 {
+	width: 100%;
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 3rem;
+    text-align: center;
+}
+
+#exp6 #contentList {
+	margin-top: 10rem;
+}
+
+#exp6 #contentList li {
+	font-size: 4rem;
+	height: 4.6rem;
+	line-height: 1;
+	text-align: center;
+	transform: rotateX(180deg);
+	transition: transform 1s, color 1s;
+	color:#cacaca;
+}
+
+#exp6 #contentList li:hover, #exp6 #contentList li:focus, #exp1 #contentList li.list_ani {
+	color: #000;
+	transform: rotateX(360deg); 
+}
+
+/* ---------- footer ---------- */
+
+footer > div {
+	position: fixed;
+	left:0;
+	bottom: 1.45rem;
+	width: 100vw;
+	text-align: center;
+	font-weight: 700;
+	color: #000;
+}
+

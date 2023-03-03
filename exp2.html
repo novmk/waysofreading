@@ -38,77 +38,81 @@
 
   </head>
 
-  <body>
+  <body id="bodyExp2">
 
     <div class="main_container">
       <header id="header">
-          <h1>WAYS OF INTERRUPTING<br>SKIMMING THE INFORMATION</h1>
+        <a href="index.html"><h1>WAYS OF READING : <br>INTERRUPTING <br>SKIMMING THE INFORMATION</h1></a>
+  
+        <nav id="gnb">
+          <h2 class="d_n">Page List</h2>
+          <ul id="gnbList" class="clear">
+            <li class="gnb_list"><a href="exp1.html">01</a></li>
+            <li class="gnb_list"><a href="exp2.html" class="bor">02</a></li>
+            <li class="gnb_list"><a href="exp3.html">03</a></li>
+            <li class="gnb_list"><a href="exp4.html">04</a></li>
+            <li class="gnb_list"><a href="exp5.html">05</a></li>
+            <li class="gnb_list"><a href="exp6.html">06</a></li>
+          </ul>
+        </nav>
+      </header>
     
-          <nav id="gnb">
-            <h2 class="d_n">gnb</h2>
-            <ul id="gnbList" class="clear">
-              <li class="gnb_list"><a href="index.html">01</a></li>
-              <li class="gnb_list"><a href="exp2.html" class="bor">02</a></li>
-              <li class="gnb_list"><a href="exp3.html">03</a></li>
-              <li class="gnb_list"><a href="exp4.html">04</a></li>
-            </ul>
-          </nav>
-        </header>
-    
-        <section id="exp2" class="page_section clear">
-          <p id="dropStatus" class="d_n"></p>
-          <div id="wrapperP1"  class="drop_target" ondrop="drop(event)" ondragover="allowDrop(event)">
-            <div class="wrapper_title">
-              please read from here
-              <span class="gt">&gt;</span>
-            </div>
-            <p ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="dragItem">
-              Long-standing digital device use has changed how humans read and perceive information. Instantaneous and abundant information through websites and social media has resulted in a change in human reading habits. People naturally selectively accept only the seemingly important data and skip the rest to obtain target information quickly among plenty of information. Consequently, skimming and scanning has become the predominant form of reading. This project is an experimental web experiment that interrupts users from skimming information, providing a linear process of reading.
-            </p>
+      <section id="exp2" class="page_section clear">
+        <h2 class="d_n">Experiment 02</h2>
+        <p id="dropStatus" class="d_n"></p>
+        <div id="wrapperP1"  class="drop_target" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <div class="wrapper_title">
+            please read from here
+            <span class="gt">&gt;</span>
           </div>
-          <div id="wrapperP2"  class="drop_target" ondrop="drop(event)" ondragover="allowDrop(event)">
-            <div class="wrapper_title">
-              continue to read from here
-              <span class="gt">&gt;</span>
-            </div>
+          <p ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="dragItem">
+            Long-standing digital device use has changed how humans read and perceive information. Instantaneous and abundant information through websites and social media has resulted in a change in human reading habits. People naturally selectively accept only the seemingly important data, and skip the rest to obtain target information quickly. Consequently, skimming and scanning has become the predominant form of reading.<br><br>Recent studies have shown that a linear way of reading is a traditional mode that allows readers to remember and focus more on content, delivering a better understanding of content and critical thinking.<br>The series of web experiments translates traditional reading into a web environment. They interrupt users from skimming information, providing a slower, linear process of reading.
+          </p>
+        </div>
+        <div id="wrapperP2"  class="drop_target" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <div class="wrapper_title">
+            continue to read from here
+            <span class="gt">&gt;</span>
           </div>
-          <div id="wrapperP3"  class="drop_target" ondrop="drop(event)" ondragover="allowDrop(event)">
-            <div class="wrapper_title">
-              continue to read from here
-              <span class="gt">&gt;</span>
-            </div>
+        </div>
+        <div id="wrapperP3"  class="drop_target" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <div class="wrapper_title">
+            continue to read from here
+            <span class="gt">&gt;</span>
           </div>
-          <div id="wrapperP4" class="drop_target" ondrop="drop(event)" ondragover="allowDrop(event)">
-            <div class="wrapper_title">
-              continue to read from here
-              <span class="gt">&gt;</span>
-            </div>
+        </div>
+        <div id="wrapperP4" class="drop_target" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <div class="wrapper_title">
+            continue to read from here
+            <span class="gt">&gt;</span>
           </div>
+        </div>
 
-          <script>
-          function dragStart(event) {
-            event.dataTransfer.setData("Text", event.target.id);
-          }
+        <script>
+        function dragStart(event) {
+          event.dataTransfer.setData("Text", event.target.id);
+        }
 
-          function dragging(event) {
-            document.getElementById("dropStatus").innerHTML = "The p element is being dragged";
-          }
+        function dragging(event) {
+          document.getElementById("dropStatus").innerHTML = "The p element is being dragged";
+        }
 
-          function allowDrop(event) {
-            event.preventDefault();
-          }
+        function allowDrop(event) {
+          event.preventDefault();
+        }
 
-          function drop(event) {
-            event.preventDefault();
-            const data = event.dataTransfer.getData("Text");
-            event.target.appendChild(document.getElementById(data));
-            document.getElementById("dropStatus").innerHTML = "The p element was dropped";
-          }
-          </script>
+        function drop(event) {
+          event.preventDefault();
+          const data = event.dataTransfer.getData("Text");
+          event.target.appendChild(document.getElementById(data));
+          document.getElementById("dropStatus").innerHTML = "The p element was dropped";
+        }
+        </script>
 
-        </section>
+      </section>
     
       <footer>
+        <div>THE WEB EXPERIMENT SERIES</div>
       </footer>
     </div>
 
