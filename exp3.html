@@ -7,88 +7,58 @@
     <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.min.js"></script> -->
     <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/addons/p5.sound.min.js"></script> -->
     <!-- <script type="text/javascript" src="js/p5.min.js"></script> -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script type="text/javascript" src="jquery.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function (){
-        var $main = $('.main_container');
-        
-        $main.append('<div class="cursor">please mouse over<br>to stop texts</div>');
-      
-        $(document).mousemove(function(e) {
-            $('.cursor')
-              .eq(0)
-              .css({
-                left: e.pageX + 20,
-                top: e.pageY - 60,
-              });
-            setTimeout(function() {
-              $('.cursor')
-                .eq(1)
-                .css({
-                  left: e.pageX + 20,
-                  top: e.pageY - 60,
-                });
-            }, 120);
-          });    
-      });
-    </script>
   </head>
 
-  <body id="bodyExp3">
+  <body>
 
-    <div class="main_container">
-      <header id="header">
-        <a href="index.html"><h1>WAYS OF READING : <br>INTERRUPTING <br>SKIMMING THE INFORMATION</h1></a>
-  
-        <nav id="gnb">
-          <h2 class="d_n">Page List</h2>
-          <ul id="gnbList" class="clear">
-            <li class="gnb_list"><a href="exp1.html">01</a></li>
-            <li class="gnb_list"><a href="exp2.html">02</a></li>
-            <li class="gnb_list"><a href="exp3.html" class="bor">03</a></li>
-            <li class="gnb_list"><a href="exp4.html">04</a></li>
-            <li class="gnb_list"><a href="exp5.html">05</a></li>
-            <li class="gnb_list"><a href="exp6.html">06</a></li>
-          </ul>
-        </nav>
+    <div class="main_container exp">
+      <header>
+        <h1 class="nav">EXPERIMENT 03</h1>
       </header>
+      <div class="nav side l"><a href="exp2.html">PREV</a></div>
+      <div class="nav side r"><a href="exp4.html">NEXT</a></div>
     
+      <a href="#" class="prompt"><p>please mouse over<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;to stop texts<br><br>&emsp;&emsp;&emsp;click to read</p></a>
+
       <section id="exp3" class="page_section">
         <h2 class="d_n">Experiment 03</h2>
         <div id="contentList">
-          <div class="list1"><div>Long-standing digital device use</div></div>
-          <div class="list2"><div>has changed how humans read</div></div> 
-          <div class="list3"><div>and perceive information.</div></div>
-          <div class="list4"><div>Instantaneous and abundant</div></div>
-          <div class="list5"><div>information through websites and</div></div>
-          <div class="list6"><div>social media has resulted in</div></div>
-          <div class="list7"><div>a change in human reading habits.</div></div>
-          <div class="list8"><div>People naturally selectively accept</div></div>
-          <div class="list9"><div>only the seemingly important data,</div></div>
-          <div class="list10"><div>and skip the rest to obtain</div></div>
-          <div class="list11"><div>target information quickly.</div></div>
-          <div class="list12"><div>Consequently, skimming and</div></div>
-          <div class="list13"><div>scanning has become</div></div>
-          <div class="list14"><div>the predominant form of reading.</div></div>
-          <div class="list15"><div>Recent studies have shown that</div></div>
-          <div class="list16"><div>a linear way of reading is</div></div>
-          <div class="list17"><div>a traditional mode that allows</div></div>
-          <div class="list18"><div>readers to remember and focus</div></div>
-          <div class="list19"><div>more on content, delivering</div></div>
-          <div class="list20"><div>a better understanding of content</div></div>
-          <div class="list21"><div>and critical thinking. The series of</div></div>
-          <div class="list22"><div>web experiments translates</div></div>
-          <div class="list23"><div>traditional reading into a web</div></div>
-          <div class="list24"><div>environment. They interrupt users</div></div>
-          <div class="list25"><div>from skimming information, providing</div></div>
+          <div class="list1"><div>The sustained use of digital devices</div></div>
+          <div class="list2"><div>has resulted in changes</div></div>
+          <div class="list3"><div>in how humans read and perceive information.</div></div>
+          <div class="list4"><div>Immediate and abundant data</div></div>
+          <div class="list5"><div>have transformed human reading habits,</div></div>
+          <div class="list6"><div>prompting individuals to selectively accept</div></div>
+          <div class="list7"><div>seemingly important information</div></div>
+          <div class="list8"><div>and skip the rest</div></div>
+          <div class="list9"><div>to obtain target information quickly.</div></div>
+          <div class="list10"><div>Consequently,</div></div>
+          <div class="list11"><div>skimming and scanning has become</div></div>
+          <div class="list12"><div>the predominant form of reading.</div></div>
+          <div class="list13"><div>Recent studies have shown that</div></div>
+          <div class="list14"><div>a linear way of</div></div>
+          <div class="list15"><div>conventional reading approach</div></div>
+          <div class="list16"><div>of consuming content slowly and sequentially</div></div>
+          <div class="list17"><div>enhances comprehension and critical thinking.</div></div>
+          <div class="list18"><div>In line with this idea,</div></div>
+          <div class="list19"><div>the series of web experiments</div></div>
+          <div class="list20"><div>translates the traditional mode</div></div>
+          <div class="list21"><div>of sequential reading</div></div>
+          <div class="list22"><div>into a web environment</div></div>
+          <div class="list23"><div>by preventing users</div></div>
+          <div class="list24"><div>from skimming content</div></div>
+          <div class="list25"><div>and providing</div></div>
           <div class="list26"><div>a slower, linear process of reading.</div></div>
         </div>
       </section>
+
     
       <footer>
-        <div>THE WEB EXPERIMENT SERIES</div>
+        <a href="index.html" class="nav">BACK TO LIST</a>
       </footer>
     </div>
 

@@ -7,56 +7,23 @@
     <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.min.js"></script> -->
     <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/addons/p5.sound.min.js"></script> -->
     <!-- <script type="text/javascript" src="js/p5.min.js"></script> -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script type="text/javascript" src="jquery.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function (){
-        var $main = $('.main_container');
-        
-        $main.append('<div class="cursor">please drag and drop the text<br>into boxes</div>');
-      
-        $(document).mousemove(function(e) {
-            $('.cursor')
-              .eq(0)
-              .css({
-                left: e.pageX + 20,
-                top: e.pageY - 60,
-              });
-            setTimeout(function() {
-              $('.cursor')
-                .eq(1)
-                .css({
-                  left: e.pageX + 20,
-                  top: e.pageY - 60,
-                });
-            }, 120);
-            
-          });    
-      });
-    </script>
-
   </head>
 
-  <body id="bodyExp2">
+  <body>
 
-    <div class="main_container">
-      <header id="header">
-        <a href="index.html"><h1>WAYS OF READING : <br>INTERRUPTING <br>SKIMMING THE INFORMATION</h1></a>
-  
-        <nav id="gnb">
-          <h2 class="d_n">Page List</h2>
-          <ul id="gnbList" class="clear">
-            <li class="gnb_list"><a href="exp1.html">01</a></li>
-            <li class="gnb_list"><a href="exp2.html" class="bor">02</a></li>
-            <li class="gnb_list"><a href="exp3.html">03</a></li>
-            <li class="gnb_list"><a href="exp4.html">04</a></li>
-            <li class="gnb_list"><a href="exp5.html">05</a></li>
-            <li class="gnb_list"><a href="exp6.html">06</a></li>
-          </ul>
-        </nav>
+    <div class="main_container exp">
+      <header>
+        <h1 class="nav">EXPERIMENT 02</h1>
       </header>
+      <div class="nav side l"><a href="exp1.html">PREV</a></div>
+      <div class="nav side r"><a href="exp3.html">NEXT</a></div>
     
+      <a href="#" class="prompt"><p>please drag and drop<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;the text into boxes<br><br>&emsp;&emsp;&emsp;click to read</p></a>
+
       <section id="exp2" class="page_section clear">
         <h2 class="d_n">Experiment 02</h2>
         <p id="dropStatus" class="d_n"></p>
@@ -66,7 +33,7 @@
             <span class="gt">&gt;</span>
           </div>
           <p ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="dragItem">
-            Long-standing digital device use has changed how humans read and perceive information. Instantaneous and abundant information through websites and social media has resulted in a change in human reading habits. People naturally selectively accept only the seemingly important data, and skip the rest to obtain target information quickly. Consequently, skimming and scanning has become the predominant form of reading.<br><br>Recent studies have shown that a linear way of reading is a traditional mode that allows readers to remember and focus more on content, delivering a better understanding of content and critical thinking.<br>The series of web experiments translates traditional reading into a web environment. They interrupt users from skimming information, providing a slower, linear process of reading.
+            The sustained use of digital devices has resulted in changes in how humans read and perceive information. Immediate and abundant data through websites and social media platforms have transformed human reading habits, prompting individuals to selectively accept seemingly important information and skip the rest to obtain target information quickly. Consequently, skimming and scanning has become the predominant form of reading.<br><br>Recent studies have shown that a linear way of conventional reading approach of consuming content slowly and sequentially enhances comprehension and critical thinking.<br><br>In line with this idea, the series of web experiments translates the traditional mode of sequential reading into a web environment by preventing users from skimming content and providing a slower, linear process of reading.
           </p>
         </div>
         <div id="wrapperP2"  class="drop_target" ondrop="drop(event)" ondragover="allowDrop(event)">
@@ -112,7 +79,7 @@
       </section>
     
       <footer>
-        <div>THE WEB EXPERIMENT SERIES</div>
+        <a href="index.html" class="nav">BACK TO LIST</a>
       </footer>
     </div>
 

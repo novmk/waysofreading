@@ -7,88 +7,57 @@
     <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.min.js"></script> -->
     <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/addons/p5.sound.min.js"></script> -->
     <!-- <script type="text/javascript" src="js/p5.min.js"></script> -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script type="text/javascript" src="jquery.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function (){
-        var $main = $('.main_container');
-        
-        $main.append('<div class="cursor">please mouse over<br>to read contents</div>');
-      
-        $(document).mousemove(function(e) {
-            $('.cursor')
-              .eq(0)
-              .css({
-                left: e.pageX + 20,
-                top: e.pageY - 60,
-              });
-            setTimeout(function() {
-              $('.cursor')
-                .eq(1)
-                .css({
-                  left: e.pageX + 20,
-                  top: e.pageY - 60,
-                });
-            }, 120);
-          });    
-      });
-    </script>
   </head>
 
-  <body id="bodyExp4">
+  <body>
 
-    <div class="main_container">
-      <header id="header">
-        <a href="index.html"><h1>WAYS OF READING : <br>INTERRUPTING <br>SKIMMING THE INFORMATION</h1></a>
-  
-        <nav id="gnb">
-          <h2 class="d_n">Page List</h2>
-          <ul id="gnbList" class="clear">
-            <li class="gnb_list"><a href="exp1.html">01</a></li>
-            <li class="gnb_list"><a href="exp2.html">02</a></li>
-            <li class="gnb_list"><a href="exp3.html">03</a></li>
-            <li class="gnb_list"><a href="exp4.html" class="bor">04</a></li>
-            <li class="gnb_list"><a href="exp5.html">05</a></li>
-            <li class="gnb_list"><a href="exp6.html">06</a></li>
-          </ul>
-        </nav>
+    <div class="main_container exp">
+      <header>
+        <h1 class="nav">EXPERIMENT 04</h1>
       </header>
+      <div class="nav side l"><a href="exp3.html">PREV</a></div>
+      <div class="nav side r"><a href="exp5.html">NEXT</a></div>
     
+      <a href="#" class="prompt"><p>please mouse over<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;to read contents<br><br>&emsp;&emsp;&emsp;click to read</p></a>
+
       <section id="exp4" class="page_section">
         <h2 class="d_n">Experiment 04</h2>
         <ul id="contentList">
-          <li class="list_item">Long-standing digital device use</li>
-          <li class="list_item">has changed how humans read</li>
-          <li class="list_item">and perceive information.</li>
-          <li class="list_item">Instantaneous and abundant</li>
-          <li class="list_item">information through websites and</li>
-          <li class="list_item">social media has resulted in</li>
-          <li class="list_item">a change in human reading habits.</li>
-          <li class="list_item">People naturally selectively accept</li>
-          <li class="list_item">only the seemingly important data,</li>
-          <li class="list_item">and skip the rest to obtain</li>
-          <li class="list_item">target information quickly.</li>
-          <li class="list_item">Consequently, skimming and</li>
-          <li class="list_item">scanning has become</li>
+          <li class="list_item">The sustained use of digital devices</li>
+          <li class="list_item">has resulted in changes</li>
+          <li class="list_item">in how humans read and perceive information.</li>
+          <li class="list_item">Immediate and abundant data</li>
+          <li class="list_item">have transformed human reading habits,</li>
+          <li class="list_item">prompting individuals to selectively accept</li>
+          <li class="list_item">seemingly important information</li>
+          <li class="list_item">and skip the rest</li>
+          <li class="list_item">to obtain target information quickly.</li>
+          <li class="list_item">Consequently,</li>
+          <li class="list_item">skimming and scanning has become</li>
           <li class="list_item">the predominant form of reading.</li>
           <li class="list_item">Recent studies have shown that</li>
-          <li class="list_item">a linear way of reading is</li>
-          <li class="list_item">a traditional mode that allows</li>
-          <li class="list_item">readers to remember and focus</li>
-          <li class="list_item">more on content, delivering</li>
-          <li class="list_item">a better understanding of content</li>
-          <li class="list_item">and critical thinking. The series of</li>
-          <li class="list_item">web experiments translates</li>
-          <li class="list_item">traditional reading into a web</li>
-          <li class="list_item">environment. They interrupt users</li>
-          <li class="list_item">from skimming information, providing</li>
+          <li class="list_item">a linear way of</li>
+          <li class="list_item">conventional reading approach</li>
+          <li class="list_item">of consuming content slowly and sequentially</li>
+          <li class="list_item">enhances comprehension and critical thinking.</li>
+          <li class="list_item">In line with this idea,</li>
+          <li class="list_item">the series of web experiments</li>
+          <li class="list_item">translates the traditional mode</li>
+          <li class="list_item">of sequential reading</li>
+          <li class="list_item">into a web environment</li>
+          <li class="list_item">by preventing users</li>
+          <li class="list_item">from skimming content</li>
+          <li class="list_item">and providing</li>
           <li class="list_item">a slower, linear process of reading.</li>
         </ul>
       </section>
     
       <footer>
-        <div>THE WEB EXPERIMENT SERIES</div>
+        <a href="index.html" class="nav">BACK TO LIST</a>
       </footer>
     </div>
 
