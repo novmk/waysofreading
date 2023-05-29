@@ -3,8 +3,7 @@ $(document).ready(function() {
 
     $(".scroll").click(function (e){
         var toLink = $(this).attr('alt');
-        var linkTop = $('#' + toLink).offset().top - $('#' + toLink).height()/2.71;
-        console.log(linkTop);
+        var linkTop = $('#' + toLink).offset().top - $('#' + toLink).height()/2.64;
         $('html, body').animate({
             scrollTop: linkTop
         }, 2000);

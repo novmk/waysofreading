@@ -54,12 +54,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 .cursor {
-  	position: absolute;
-  	padding: 0.4rem 1.5rem 0.5rem 0.8rem;
-  	border: 1px solid #000;
-  	background: #fff;
-    z-index: 3000;
-    font-size: 0.8rem;
+	position: absolute;
+	padding: 0.4rem 1.5rem 0.5rem 0.8rem;
+	border: 1px solid #000;
+	background: #fff;
+  z-index: 3000;
+  font-size: 0.8rem;
 }
 
 .bor {
@@ -127,21 +127,45 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 	margin: 0px auto;
 	margin-top: 9.4rem;
 	transform: skew(0deg, 0);
-	animation: bgAni 20s linear infinite;
+	-webkit-transform: skew(0deg, 0);
+	-moz-transform: skew(0deg, 0);
+	-ms-transform: skew(0deg, 0);
+	animation: bgAni 20s infinite;
+	-webkit-animation: bgAni 20s infinite;
+	-moz-animation: bgAni 20s infinite;
+	animation-timing-function: linear;
+	-webkit-animation-timing-function: linear;
+	-moz-animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-iteration-count: infinite;
 	margin-left: 52.2%;
 }
 
 @keyframes bgAni {
-	100% {transform: skew(360deg, 0);}
+	0% {
+		transform: skew(0, 0);
+		-webkit-transform: skew(0, 0);
+		-moz-transform: skew(0, 0);
+		-ms-transform: skew(0, 0);
+	} 100% {
+		transform: skew(360deg, 0);
+		-webkit-transform: skew(360deg, 0);
+		-moz-transform: skew(360deg, 0);
+		-ms-transform: skew(360deg, 0);
+	}
 }
 
 #index #pageList > li {
 	position: relative;
-    display: block;
-    float: left;
-    transform: skew(0, -4.1deg);
-    width: 48.2rem;
-    margin-left: -42.5rem;
+  display: block;
+  float: left;
+  transform: skew(0, -4.1deg);
+  -webkit-transform: skew(0, -4.1deg);
+  -moz-transform: skew(0, -4.1deg);
+  -ms-transform: skew(0, -4.1deg);
+  width: 48.2rem;
+  margin-left: -42.5rem;
 }
 
 #index #pageList #pageList01 {margin-top: 0rem;}
@@ -182,11 +206,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .main_container .side {
 	position: fixed;
 	top: 50%;
-	margin-top: -3rem;
+	margin-top: -1.5rem;
 }
 
 .main_container .side.l {
 	transform: rotate(-90deg);
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
 	margin-left: -4.5rem;
 }
 
@@ -196,6 +223,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 .main_container .side.r {
 	transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
 	margin-right: -4.5rem;
 	right: 0;
 }
@@ -234,69 +264,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 	border-bottom: 0.15rem solid #000;
 }
 
-/* ---------- list ---------- */	
-
-#listContainer {
-	position: relative;
-	width: 34vw;
-	height: 70vh;
-	margin: 0px auto;
-	margin-top: 10rem;
-}
-
-#listContainer > a {
-	display: block;
-	position: absolute;
-	font-size: 3.8rem;
-	line-height: 4.2rem;
-}
-
-#listContainer > a:hover, #listContainer > a:focus {
-	border-bottom: 3px solid #000;
-}
-
-#listContainer .list_item1 {
-	top: 0;
-	left: 7vw;
-}
-
-#listContainer .list_item2 {
-	top: 9vh;
-	left: 10vw;
-	animation-delay: 2.5s;
-}
-
-#listContainer .list_item3 {
-	top: 18vh;
-	left: 24vw;
-	animation-delay: 1s;
-}
-
-#listContainer .list_item4 {
-	top: 31vh;
-	left: 20vw;
-	animation-delay: 0.5s;
-}
-
-#listContainer .list_item5 {
-	top: 42vh;
-	left: 4vw;
-	animation-delay: 1.5s;
-}
-
-#listContainer .list_item6 {
-	top: 59vh;
-	left: 24vw;
-	animation-delay: 2s;
-}
-
 /* ---------- about ---------- */	
 
 #aboutTxt {
   width: 36vw;
   line-height: 1.35;
   margin: 0px auto;
-  margin-top: 12.5rem;
+  margin-top: 20vh;
 	text-align: center;
 }
 
@@ -341,12 +315,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 	text-align: center;
 	color: #fff;
 	transform: rotateX(180deg);
+	-webkit-transform: rotateX(180deg);
+	-moz-transform: rotateX(180deg);
+	-ms-transform: rotateX(180deg);
 	transition: transform 1s, color 1s;
 }
 
 #exp1 #contentList li:hover, #exp1 #contentList li:focus, #exp1 #contentList li.list_ani {
 	color: #000;
 	transform: rotateX(360deg);
+	-webkit-transform: rotateX(360deg);
+	-moz-transform: rotateX(360deg);
+	-ms-transform: rotateX(360deg);
 	-webkit-user-select: none;
 	-webkit-touch-callout: none;  
 }
@@ -377,14 +357,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 #exp2 .drop_target:hover, #exp2 .drop_target:focus {
-	background: url(images/bg_exp1.jpg);
+	background: url(images/bg_exp.jpg);
 	background-size: auto 100%;
 	color: #fff;
 	z-index: 40;
 }
 
 #exp2 .drop_target:hover .wrapper_title, #exp2 .drop_target:focus .wrapper_title {
-	background: none;
+	background: url(images/bg_exp.jpg);
+	background-size: 100% auto;
 	color: #fff;
 	border-bottom: 1px solid #fff;
 }
@@ -440,15 +421,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 .wrapper_title {
 	position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    font-size: 0.8rem;
-    font-weight: normal;
-    border-bottom: 1px solid #000;
-    padding: 0.5rem 1rem;
-    text-transform: uppercase;
-    background: #fff;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-size: 0.8rem;
+  font-weight: normal;
+  border-bottom: 1px solid #000;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  background: #fff;
 }
 
 .gt {
@@ -458,11 +439,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 	right: 0;
 	width: 2rem;
 	height: 2rem;
-    line-height: 2rem;
-    font-size: 0.9rem;
-    text-align: right;
-    margin-top: -1px;
-    padding-right: 0.9rem;
+  line-height: 2rem;
+  font-size: 0.9rem;
+  text-align: right;
+  margin-top: -1px;
+  padding-right: 0.9rem;
 }
 
 /* ---------- exp3 ---------- */
@@ -478,20 +459,28 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 #exp3 #contentList > div > div {
-    display: inline-block;
-    position: relative;
-    font-size: 1rem;
-    background: #fff;
-    border: 1px solid #000;
-    padding: 0.5rem 1.2rem;
-    margin-bottom: 1rem;
-    animation: moveAni 8s;
-    animation-timing-function: linear;
-  	animation-iteration-count: infinite;
+  display: inline-block;
+  position: relative;
+  font-size: 1rem;
+  background: #fff;
+  border: 1px solid #000;
+  padding: 0.5rem 1.2rem;
+  margin-bottom: 1rem;
+  animation: moveAni 8s;
+  -webkit-animation: moveAni 8s;
+  -moz-animation: moveAni 8s;
+  animation-timing-function: linear;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-iteration-count: infinite;
 }
 
 #exp3 #contentList > div > div:hover, #exp3 #contentList > div > div:focus {
 	animation-play-state: paused;
+	-webkit-animation-play-state: paused;
+	-moz-animation-play-state: paused;
 	background: url(images/bg_exp1.jpg);
 	background-size: auto 110%;
 	color: #fff;
@@ -537,9 +526,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
   width: 80vw;
-/*    margin: 0px auto;*/
-/*    margin-top: 11rem;*/
 }
 	
 #exp4 #contentList {
@@ -578,7 +568,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 	font-size: 3.2rem;
 	height: 120vh;
 	text-align: center;
-/*	padding-left: 30vw;*/
 }
 
 #exp5 > div > a.scroll {
@@ -595,36 +584,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 #list_item01 {
-	margin-top: 26.2rem;
+	margin-top: 43vh;
 }
-
-
-/*#list_item01 .blank {display: inline-block; width: 5rem;}
-#list_item02 .blank {display: inline-block; width: 52rem;}
-#list_item03 .blank {display: inline-block; width: 4rem;}
-#list_item04 .blank {display: inline-block; width: 4rem;}
-#list_item05 .blank {display: inline-block; width: 4rem;}
-#list_item06 .blank {display: inline-block; width: 4rem;}
-#list_item07 .blank {display: inline-block; width: 4rem;}
-#list_item08 .blank {display: inline-block; width: 4rem;}
-#list_item09 .blank {display: inline-block; width: 4rem;}
-#list_item10 .blank {display: inline-block; width: 4rem;}
-#list_item11 .blank {display: inline-block; width: 4rem;}
-#list_item12 .blank {display: inline-block; width: 4rem;}
-#list_item13 .blank {display: inline-block; width: 4rem;} 
-#list_item14 .blank {display: inline-block; width: 4rem;}
-#list_item15 .blank {display: inline-block; width: 4rem;}
-#list_item16 .blank {display: inline-block; width: 4rem;}
-#list_item17 .blank {display: inline-block; width: 4rem;}
-#list_item18 .blank {display: inline-block; width: 4rem;}
-#list_item19 .blank {display: inline-block; width: 4rem;}
-#list_item20 .blank {display: inline-block; width: 4rem;}
-#list_item21 .blank {display: inline-block; width: 4rem;}
-#list_item22 .blank {display: inline-block; width: 4rem;}
-#list_item23 .blank {display: inline-block; width: 4rem;}
-#list_item24 .blank {display: inline-block; width: 4rem;}
-#list_item25 .blank {display: inline-block; width: 4rem;}
-#list_item26 .blank {display: inline-block; width: 4rem;}*/
 
 /* ---------- exp6 ---------- */
 
@@ -638,6 +599,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 	line-height: 1;
 	text-align: center;
 	transform: rotateX(180deg);
+	-webkit-transform: rotateX(180deg);
+	-moz-transform: rotateX(180deg);
+	-ms-transform: rotateX(180deg);
 	transition: transform 1s, color 1s;
 	color:#e5e5e5;
 }
@@ -645,6 +609,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 #exp6 #contentList li:hover, #exp6 #contentList li:focus, #exp1 #contentList li.list_ani {
 	color: #000;
 	transform: rotateX(360deg); 
+	-webkit-transform: rotateX(360deg); 
+	-moz-transform: rotateX(360deg); 
+	-ms-transform: rotateX(360deg); 
 }
 
 
