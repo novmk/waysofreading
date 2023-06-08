@@ -74,6 +74,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 body {
 	overflow-x: hidden;
+	overflow-y: scroll;
 }
 
 #index.main_container {
