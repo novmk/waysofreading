@@ -70,7 +70,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* ---------- header ----------	*/
 
 
-/* ---------- index ----------	*/	
+/* ---------- index ----------	*/
+
+body {
+	overflow-x: hidden;
+}
 
 #index.main_container {
 	position: absolute;
