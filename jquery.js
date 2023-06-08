@@ -12,7 +12,7 @@ $(document).ready(function() {
 
     $(".prompt").click(function (e){
         $(".prompt").fadeOut();
-        $(".main_container.exp").css("overflow", "auto");
+        $(".main_container.exp").css("overflow-y", "auto");
         $(".main_container.exp").css("height", "auto");
         e.preventDefault();
     });
